@@ -11,9 +11,13 @@ public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+
+    @Column(length = 100, nullable = false)
     private String titolo;
     private LocalDate dataEvento;
+    @Column(length = 1000, nullable = false)
     private String descrizione;
+    @Column(length = 100)
     private String tipoEvento;
     private int numeroMassimoPartecipanti;
 
