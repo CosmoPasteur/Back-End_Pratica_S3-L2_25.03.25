@@ -23,6 +23,15 @@ public class Main {
 
         eventoDAO.delete(eventoById);
 
+        em.getTransaction().begin();
+        //inserimento evento
+        Evento evento2 = new Evento("Evento di prova", LocalDate.of(2024, 1, 1), "Descrizione evento di prova", "Type", 100);
+        em.persist(evento2);
+        em.getTransaction().commit();
+
+        em.close();
+        emf.close();
+
     }
 }
 //EntityManagerFactory emf = Persistence.createEntityManagerFactory("gestioneeventi");
