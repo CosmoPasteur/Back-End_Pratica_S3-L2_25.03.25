@@ -20,8 +20,6 @@
             <artifactId>hibernate-core</artifactId>
             <version>6.2.5.Final</version>
         </dependency>
-
-        <!-- PostgreSQL JDBC Driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
